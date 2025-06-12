@@ -3,6 +3,7 @@
 - Exibir a lista de nomes 
 - Pesquisar por um nome na lista 
 - Sair do programa '''
+import os 
 nomes = []
 while True:
     try:
@@ -18,15 +19,18 @@ while True:
                 nome_novo = input('Digite o nome que gostaria de adicionar: ').strip().upper()
                 nomes.append(nome_novo)
             case 2:
-                quantos_nomes_ja_tem = len(nomes)
-                if quantos_nomes_ja_tem == 0:
-                    print('Lista vazia')
+                if not nomes:
+                    print('A lista está vazia.')
                 else:
-                    for nome in nomes:
-                        print(nome)
+                    print('Lista de nomes (ordenada):')
+                    for nome in sorted(nomes):
+                        print(f'- {nome}')
             case 3:
                 pesquisa = input('Digite o nome que gostaria de buscar: ').strip().upper()
-                print(f'O nome pesquisado está em {pesquisa}')
+                if pesquisa in nomes:
+                    print(f'O nome "{pesquisa}" está na lista.')
+                else:
+                    print(f'O nome "{pesquisa}" não foi encontrado na lista.')
             case 4:
                 print('Programa encerrado')
                 break
