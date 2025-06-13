@@ -56,7 +56,9 @@ while True:
                     if 0 <= alterar < len(nomes):
                         print(f'Nome atual: {nomes[alterar]}')
                         nomes[alterar] = input('Digite o novo nome: ').strip().capitalize()
-                        print('Nome alterado com sucesso!')
+
+                        print('Nome alterado com sucesso.')
+
                     else:
                         print('Índice inválido.')
             case 5:
@@ -82,3 +84,4 @@ while True:
                 print('Opção inválida. Escolha entre 1 e 6.')
     except ValueError:
         print('Entrada inválida. Digite um número entre 1 e 6.')
+
