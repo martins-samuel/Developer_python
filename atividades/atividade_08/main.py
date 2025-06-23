@@ -46,7 +46,7 @@ def main():
         menu_escolha()
         try:
             escolha = int(input('Digite a operação escolhida:  '))
-            os.system('cls')
+            os.system('cls' if os.name == 'nt' else 'clear')
         except Exception as e:
             print(f'Entrada inválida digite uma opção válida {e} ')
             continue
