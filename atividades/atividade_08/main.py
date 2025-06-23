@@ -19,25 +19,33 @@ def menu_escolha():
     
 def area_quadrado():
     lado = float(input('Digite o lado do quadrado: ').replace(',','.'))
+    os.system('cls' if os.name == 'nt' else 'clear')
     area = lado ** 2
     print(f"A área do quadrado é {area:.2f}\n")
     
 def area_retangulo():
     base = float(input('Digite a base do seu retângulo: ').replace(',','.'))
+    os.system('cls' if os.name == 'nt' else 'clear')
     altura = float(input('Digite a altura do seu retângulo: ').replace(',','.'))
+    os.system('cls' if os.name == 'nt' else 'clear')
     area = base * altura
     print(f"A área do retângulo é {area:.2f}\n")
     
 def area_triangulo():
     base = float(input('Digite a base do seu triângulo: ').replace(',','.'))
+    os.system('cls' if os.name == 'nt' else 'clear')
     altura = float(input('Digite a altura do seu triângulo: ').replace(',','.'))
+    os.system('cls' if os.name == 'nt' else 'clear')
     area = (base * altura)/2
     print(f"A área do triângulo é {area:.2f}\n")
     
 def area_trapezio():
     base_maior = float(input('Digite a base  maior do seu trapézio: ').replace(',','.'))
+    os.system('cls' if os.name == 'nt' else 'clear')
     base_menor = float(input('Digite a base  menor do seu trapézio: ').replace(',','.'))
+    os.system('cls' if os.name == 'nt' else 'clear')
     altura = float(input('Digite a altura do seu trapézio: ').replace(',','.'))
+    os.system('cls' if os.name == 'nt' else 'clear')
     area = (base_maior + base_menor) * altura / 2
     print(f"A área do trapézio é {area:.2f}\n")
     
