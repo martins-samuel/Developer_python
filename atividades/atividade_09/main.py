@@ -11,4 +11,6 @@ Os dados serão os seguintes:
 Suponha que o objeto 'usuario_2' esteja precisando de doação de sangue do 'usuario_1'
 O programa deve informar os dados dos dois usuários, e ao final, 
 informar se o usuario_1 pode doar sangue para o usuario_2 ou não
-NOTe - a última pergunta deverá ter uma resposta randômica  """
+NoTe - as duas última perguntas deverá ter uma resposta randômica  """
+class Pessoa:
+    
