@@ -9,6 +9,8 @@ while True:
     print("1- Inserir dados do usuário")
     print("2- Inserir dados da empresa")
     print("3- Sair do programa")  
+    print("4- Exibir dados do usuário ")
+    print("5- Exibir dados da empresa")
     opcao = input("Informe a opção desejada: ").strip()
     os.system("cls" if os.name == "nt" else "clear")
     match opcao:
@@ -31,11 +33,20 @@ while True:
                 empresa.cnpj = input("Informe o cnpj da empresa: ").strip()
                 empresa.email = input("Informe o e-mail da empresa").strip()
                 empresa.endereco = input("Informe o endereço da empresa: ").strip()
+                empresa.telefone = input("Informe o telefone da empresa").strip()
             except Exception as e:
-                ...
+                print("Não foi possível inserir dados da empresa. {e}")
         case "3":
             print("Programa encerrado")
             break
+        case "4":
+            print("Dados do Usuário:")
+            usuario.exibir_dados()
+            input("\nPressione Enter para continuar...")
+        case "5":
+            print("Dados da Empresa:")
+            empresa.exibir_dados()
+            input("\nPressione Enter para continuar...")
         case _:
             print("Opção inválida")
             continue        
