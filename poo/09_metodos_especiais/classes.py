@@ -6,3 +6,5 @@ class Pessoa:
 
     def __str__(self):
         return f"Olá, meu nome é {self.nome}, tenho {self.idade} de idade  e trabalho com {self.profissao}"
+    def __del__(self):
+        print (f"Objeto identificado por {self.nome} foi destruído com sucesso")
